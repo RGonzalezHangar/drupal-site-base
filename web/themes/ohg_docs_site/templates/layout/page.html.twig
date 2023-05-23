@@ -144,6 +144,28 @@
                         }
                     });
                 }
+                
+                
+                
+                function update_country_language(vlang){
+                
+                    console.log('changed language', vlang);
+         
+                    if ($('#selectCountry').val() == 'CA' || $('#selectCountry').val() == 'SG') {
+                        $('li.all a').each(function(i,e) {
+                       
+                            var href = $(e).attr('href');
+                          
+                           if ( (href.indexOf('e631600045') > -1) || (href.indexOf('e631600015') > -1) || (href.indexOf('e631600005') > -1) ) {
+           //                     console.log(href);
+                               $(this).parent().css('visibility','hidden');
+                           }
+                        });
+                    }
+                   $('.all, .language-list h1').hide();
+                   $('.content-list li').hide();
+                   toggleLanguage(vlang);
+                }
             </script>
 
 
