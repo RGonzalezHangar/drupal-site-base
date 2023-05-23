@@ -70,6 +70,11 @@
 
 
             <script>
+                $('.all, .pt').hide();
+                $('.optChinese').hide();
+                $('.country-CN').hide();
+                $('.country-SG').hide();
+                $('#selectLanguage').attr('disabled', 'disabled');
 
                 function update_country(country_value) {
                     console.log(country_value);
@@ -131,6 +136,7 @@
                         return;
                     
 
+
                     $('.' + language).fadeIn('slow');
                     $('.prompt').hide();
                     $('.prompt-one').show();
@@ -144,27 +150,25 @@
                         }
                     });
                 }
-                
-                
-                
-                function update_country_language(vlang){
-                
+
+
+                function update_country_language(vlang) {
+
                     console.log('changed language', vlang);
-         
+
                     if ($('#selectCountry').val() == 'CA' || $('#selectCountry').val() == 'SG') {
-                        $('li.all a').each(function(i,e) {
-                       
+                        $('li.all a').each(function (i, e) {
+
                             var href = $(e).attr('href');
-                          
-                           if ( (href.indexOf('e631600045') > -1) || (href.indexOf('e631600015') > -1) || (href.indexOf('e631600005') > -1) ) {
-           //                     console.log(href);
-                               $(this).parent().css('visibility','hidden');
-                           }
+
+                            if ((href.indexOf('e631600045') > -1) || (href.indexOf('e631600015') > -1) || (href.indexOf('e631600005') > -1)) { //                     console.log(href);
+                                $(this).parent().css('visibility', 'hidden');
+                            }
                         });
                     }
-                   $('.all, .language-list h1').hide();
-                   $('.content-list li').hide();
-                   toggleLanguage(vlang);
+                    $('.all, .language-list h1').hide();
+                    $('.content-list li').hide();
+                    toggleLanguage(vlang);
                 }
             </script>
 
