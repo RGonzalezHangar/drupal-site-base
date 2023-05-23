@@ -1,0 +1,22 @@
+name: ohg_docs_site
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - ohg_docs_site/base
+  - ohg_docs_site/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - ohg_docs_site/user
+  core/drupal.dropbutton:
+    - ohg_docs_site/dropbutton
+  core/drupal.dialog:
+    - ohg_docs_site/dialog
+  file/drupal.file:
+    - ohg_docs_site/file
+  core/drupal.progress:
+    - ohg_docs_site/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.0.9'
