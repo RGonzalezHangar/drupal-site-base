@@ -174,7 +174,7 @@
             <footer>
                 <div style="float:left;height:1px;background-color:#000;" class="bar"></div>
                 <div class="footerLeft">
-                    <p class="copyright">&copy; Menarini Silicon Biosystems Inc {{ "now"|date("Y") }}. All rights reserved. This site is published by Menarini Silicon Biosystems, Inc, which is solely responsible for its contents. It is intended for global audience. Last updated on: {{ post.published_at|date("F jS \\a\\t g:ia") }}.</p>
+                    <p class="copyright">&copy; Menarini Silicon Biosystems Inc {{ "now"|date("Y") }}. All rights reserved. This site is published by Menarini Silicon Biosystems, Inc, which is solely responsible for its contents. It is intended for global audience. Last updated on: {{ node.getChangedTime|date('Y-m-d') }}.</p>
                     <div class="footer-links-wrapper">
                         <ul class="footer-links-list">
                             <li>
